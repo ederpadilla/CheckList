@@ -9,6 +9,17 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
     
+    let row0text = "Walk the dog"
+    let row1text = "Brush teeth"
+    let row2text = "Learn iOS development"
+    let row3text = "Soccer practice"
+    let row4text = "Eat ice cream"
+    var row0checked = false
+    var row1checked = false
+    var row2checked = false
+    var row3checked = false
+    var row4checked = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,7 +28,7 @@ class ChecklistViewController: UITableViewController {
     // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        100
+        5
     }
     
     override func tableView(
@@ -31,16 +42,16 @@ class ChecklistViewController: UITableViewController {
         // Add the following code
         let label = cell.viewWithTag(1000) as! UILabel
         
-        if indexPath.row % 5 == 0 {
-            label.text = "Walk the dog"
-        } else if indexPath.row % 5 == 1 {
-            label.text = "Brush my teeth"
-        } else if indexPath.row % 5 == 2 {
-            label.text = "Learn iOS development"
-        } else if indexPath.row % 5 == 3 {
-            label.text = "Soccer practice"
-        } else if indexPath.row % 5 == 4 {
-            label.text = "Eat ice cream"
+        if indexPath.row == 0 {
+            label.text = row0text
+        } else if indexPath.row == 1 {
+            label.text = row1text
+        } else if indexPath.row == 2 {
+            label.text = row2text
+        } else if indexPath.row == 3 {
+            label.text = row3text
+        } else if indexPath.row == 4 {
+            label.text = row4text
         }
         return cell
     }
