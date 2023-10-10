@@ -27,6 +27,7 @@ class ChecklistViewController: UITableViewController {
         
         let item5 = ChecklistItem(text: "Eat ice cream")
         items.append(item5)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Table View Data Source
