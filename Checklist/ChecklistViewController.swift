@@ -9,16 +9,11 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
     
-    let row0text = "Walk the dog"
-    let row1text = "Brush teeth"
-    let row2text = "Learn iOS development"
-    let row3text = "Soccer practice"
-    let row4text = "Eat ice cream"
-    var row0checked = false
-    var row1checked = true
-    var row2checked = true
-    var row3checked = false
-    var row4checked = true
+    var row0item: ChecklistItem
+    var row1item: ChecklistItem
+    var row2item: ChecklistItem
+    var row3item: ChecklistItem
+    var row4item: ChecklistItem
     
     override func viewDidLoad() {
         super.viewDidLoad()
