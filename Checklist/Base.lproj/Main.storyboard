@@ -24,8 +24,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-DG-FGl">
-                                            <rect key="frame" x="28" y="13.000000000000002" width="305" height="21.666666666666671"/>
+                                            <rect key="frame" x="32" y="13.000000000000002" width="301" height="21.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1F-8J-0Cb">
+                                            <rect key="frame" x="8" y="0.0" width="23" height="47.666666666666664"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -33,8 +39,11 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="d2Q-DG-FGl" secondAttribute="trailing" constant="8" id="Y1a-cU-wFP"/>
                                         <constraint firstItem="d2Q-DG-FGl" firstAttribute="top" secondItem="JxZ-qq-3RG" secondAttribute="topMargin" constant="2" id="Ydg-5D-u9R"/>
-                                        <constraint firstItem="d2Q-DG-FGl" firstAttribute="leading" secondItem="JxZ-qq-3RG" secondAttribute="leadingMargin" constant="8" id="fxv-g7-j3u"/>
+                                        <constraint firstItem="b1F-8J-0Cb" firstAttribute="top" secondItem="JxZ-qq-3RG" secondAttribute="top" id="dCb-2c-yei"/>
+                                        <constraint firstItem="d2Q-DG-FGl" firstAttribute="leading" secondItem="b1F-8J-0Cb" secondAttribute="leadingMargin" constant="16" id="fxv-g7-j3u"/>
+                                        <constraint firstItem="b1F-8J-0Cb" firstAttribute="leading" secondItem="JxZ-qq-3RG" secondAttribute="leading" constant="8" id="ieI-gX-Zks"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="d2Q-DG-FGl" secondAttribute="bottom" constant="2" id="squ-Uh-68B"/>
+                                        <constraint firstAttribute="bottom" secondItem="b1F-8J-0Cb" secondAttribute="bottom" id="uY2-f4-Ya5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

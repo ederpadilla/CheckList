@@ -64,11 +64,8 @@ class ChecklistViewController: UITableViewController {
         for cell: UITableViewCell,
         with item: ChecklistItem
     ) {
-        if item.checked {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        let label = cell.viewWithTag(1001) as! UILabel
+        label.text = item.checked ? "✅" : ""
     }
     
     
