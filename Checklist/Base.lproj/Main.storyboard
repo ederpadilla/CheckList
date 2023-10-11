@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="jZs-iT-qb1">
-                                <rect key="frame" x="0.0" y="50" width="393" height="47.333332061767578"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="47.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jZs-iT-qb1" id="JxZ-qq-3RG">
-                                    <rect key="frame" x="0.0" y="0.0" width="349" height="47.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="47.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-DG-FGl">
-                                            <rect key="frame" x="28" y="12.999999999999998" width="305" height="21.333333333333329"/>
+                                            <rect key="frame" x="28" y="13.000000000000002" width="305" height="21.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -69,14 +69,14 @@
                             <tableViewSection id="wsc-QK-yEq">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cw3-Q1-Hcv">
-                                        <rect key="frame" x="0.0" y="18" width="393" height="19"/>
+                                        <rect key="frame" x="0.0" y="18" width="393" height="19.333333969116211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cw3-Q1-Hcv" id="icJ-PR-iJq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="19"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="19.333333969116211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsd-5E-m2Q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="19"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="19.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -100,17 +100,17 @@
                     <navigationItem key="navigationItem" title="Add Item" largeTitleDisplayMode="never" id="tmX-Za-gYj">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0ch-Sm-56S">
                             <connections>
-                                <action selector="cancel" destination="HNl-NL-v4Y" id="iQ9-FY-ioz"/>
+                                <action selector="cancel" destination="HNl-NL-v4Y" id="yH8-6B-CsR"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="CSa-4n-YLM">
                             <connections>
-                                <action selector="done" destination="HNl-NL-v4Y" id="07T-FV-NSV"/>
+                                <action selector="done" destination="HNl-NL-v4Y" id="mJb-ZL-rjn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textfield" destination="nsd-5E-m2Q" id="3E7-Vm-lLQ"/>
+                        <outlet property="textField" destination="nsd-5E-m2Q" id="Nfd-In-3kT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlR-12-RJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
