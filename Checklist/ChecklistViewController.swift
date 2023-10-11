@@ -42,6 +42,16 @@ class ChecklistViewController: UITableViewController {
         tableView.insertRows(at: indexPaths, with: .automatic)
     }
     
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?
+    ) {
+        if segue.identifier == "AddItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+        }
+    }
+    
     // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
@@ -108,3 +118,15 @@ class ChecklistViewController: UITableViewController {
     }
 }
 
+
+extension ChecklistViewController: AddItemViewControllerDelegate{
+    
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addItemViewController(_ controller: AddItemViewController,
+                               didFinishAdding item: ChecklistItem) {
+        navigationController?.popViewController(animated: true)
+    }
+}
