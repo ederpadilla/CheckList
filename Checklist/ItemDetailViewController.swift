@@ -7,12 +7,12 @@
 
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class ItemDetailViewController: UITableViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     var itemToEdit: ChecklistItem?
-    weak var delegate: AddItemViewControllerDelegate?
+    weak var delegate: ItemDetailViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,19 +31,19 @@ class AddItemViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func cancel() {
-        delegate?.addItemViewControllerDidCancel(self)
+        delegate?.itemDetailViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
         if var item = itemToEdit {
             item.text = textField.text!
-            delegate?.addItemViewController(
+            delegate?.itemDetailViewController(
                 self,
                 didFinishEditing: item)
         } else {
             var item = ChecklistItem()
             item.text = textField.text!
-            delegate?.addItemViewController(self, didFinishAdding: item)
+            delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
     
@@ -56,7 +56,7 @@ class AddItemViewController: UITableViewController {
     }
 }
 
-extension AddItemViewController: UITextFieldDelegate {
+extension ItemDetailViewController: UITextFieldDelegate {
     
     func textField(
         _ textField: UITextField,
@@ -74,15 +74,15 @@ extension AddItemViewController: UITextFieldDelegate {
     
 }
 
-protocol AddItemViewControllerDelegate: AnyObject {
-    func addItemViewControllerDidCancel(
-        _ controller: AddItemViewController)
-    func addItemViewController(
-        _ controller: AddItemViewController,
+protocol ItemDetailViewControllerDelegate: AnyObject {
+    func itemDetailViewControllerDidCancel(
+        _ controller: ItemDetailViewController)
+    func itemDetailViewController(
+        _ controller: ItemDetailViewController,
         didFinishAdding item: ChecklistItem
     )
-    func addItemViewController(
-        _ controller: AddItemViewController,
+    func itemDetailViewController(
+        _ controller: ItemDetailViewController,
         didFinishEditing item: ChecklistItem
     )
 }
