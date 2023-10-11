@@ -17,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="jZs-iT-qb1">
-                                <rect key="frame" x="0.0" y="50" width="393" height="47"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="47.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jZs-iT-qb1" id="JxZ-qq-3RG">
-                                    <rect key="frame" x="0.0" y="0.0" width="349" height="47"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="47.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-DG-FGl">
-                                            <rect key="frame" x="28" y="13" width="305" height="21"/>
+                                            <rect key="frame" x="28" y="12.999999999999998" width="305" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="582.44274809160299" y="-104.22535211267606"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Item-->
         <scene sceneID="Jon-Yi-H6j">
             <objects>
-                <tableViewController id="HNl-NL-v4Y" sceneMemberID="viewController">
+                <tableViewController id="HNl-NL-v4Y" customClass="AddItemViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1aJ-iw-N41">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,10 @@
                             <outlet property="delegate" destination="HNl-NL-v4Y" id="lhJ-Sv-6JN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uFr-lI-RVd"/>
+                    <navigationItem key="navigationItem" title="Add Item" largeTitleDisplayMode="never" id="tmX-Za-gYj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0ch-Sm-56S"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="CSa-4n-YLM"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlR-12-RJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
