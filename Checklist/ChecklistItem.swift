@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChecklistItem {
+struct ChecklistItem: Equatable {
     var text = ""
     var checked = false
 }

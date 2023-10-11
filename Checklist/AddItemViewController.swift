@@ -35,9 +35,16 @@ class AddItemViewController: UITableViewController {
     }
     
     @IBAction func done() {
-        var item = ChecklistItem()
-        item.text = textField.text!
-        delegate?.addItemViewController(self, didFinishAdding: item)
+        if var item = itemToEdit {
+            item.text = textField.text!
+            delegate?.addItemViewController(
+                self,
+                didFinishEditing: item)
+        } else {
+            var item = ChecklistItem()
+            item.text = textField.text!
+            delegate?.addItemViewController(self, didFinishAdding: item)
+        }
     }
     
     // MARK: - Table View Delegates
@@ -73,5 +80,9 @@ protocol AddItemViewControllerDelegate: AnyObject {
     func addItemViewController(
         _ controller: AddItemViewController,
         didFinishAdding item: ChecklistItem
+    )
+    func addItemViewController(
+        _ controller: AddItemViewController,
+        didFinishEditing item: ChecklistItem
     )
 }
