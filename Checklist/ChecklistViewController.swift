@@ -13,24 +13,9 @@ class ChecklistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var item1 = ChecklistItem(text: "Walk the dog")
-        items.append(item1)
-        
-        let item2 = ChecklistItem(text: "Brush my teeth", checked: true)
-        items.append(item2)
-        
-        let item3 = ChecklistItem(text: "Learn iOS development", checked: true)
-        items.append(item3)
-        
-        let item4 = ChecklistItem(text: "Soccer practice")
-        items.append(item4)
-        
-        let item5 = ChecklistItem(text: "Eat ice cream")
-        items.append(item5)
-        print("Documents folder is \(documentsDirectory())")
-        print("Data file path is \(dataFilePath())")
-        
         navigationController?.navigationBar.prefersLargeTitles = true
+        // Load items
+        loadChecklistItems()
     }
     
     override func prepare(
@@ -64,14 +49,26 @@ class ChecklistViewController: UITableViewController {
     }
     
     func saveChecklistItems() {
-      let encoder = PropertyListEncoder()
-      do {
-        let data = try encoder.encode(items)
-        try data.write( to: dataFilePath(),
-                        options: Data.WritingOptions.atomic)
-      } catch {
-        print("Error encoding item array: \(error.localizedDescription)")
-      }
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(items)
+            try data.write( to: dataFilePath(),
+                            options: Data.WritingOptions.atomic)
+        } catch {
+            print("Error encoding item array: \(error.localizedDescription)")
+        }
+    }
+    
+    func loadChecklistItems() {
+        let path = dataFilePath()
+        if let data = try? Data(contentsOf: path) {
+            let decoder = PropertyListDecoder()
+            do {
+                items = try decoder.decode([ChecklistItem].self, from: data)
+            } catch {
+                print("Error decoding item array: \(error.localizedDescription)")
+            }
+        }
     }
     
     // MARK: - Table View Data Source
