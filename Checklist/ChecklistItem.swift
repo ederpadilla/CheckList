@@ -7,10 +7,7 @@
 
 import Foundation
 
-class ChecklistItem: Equatable {
-    static func == (lhs: ChecklistItem, rhs: ChecklistItem) -> Bool {
-        true
-    }
+class ChecklistItem: NSObject, Codable {
     
     var text = ""
     var checked = false
