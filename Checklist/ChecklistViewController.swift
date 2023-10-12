@@ -123,6 +123,7 @@ class ChecklistViewController: UITableViewController {
             configureCheckmark(for: cell, with: item)
         }
         tableView.deselectRow(at: indexPath, animated: true)
+        saveChecklistItems()
     }
     
     override func tableView(
@@ -134,6 +135,7 @@ class ChecklistViewController: UITableViewController {
         
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
+        saveChecklistItems()
     }
 }
 
@@ -154,6 +156,7 @@ extension ChecklistViewController: ItemDetailViewControllerDelegate{
             let indexPaths = [indexPath]
             tableView.insertRows(at: indexPaths, with: .automatic)
             navigationController?.popViewController(animated: true)
+            saveChecklistItems()
         }
     
     func itemDetailViewController(
@@ -166,5 +169,6 @@ extension ChecklistViewController: ItemDetailViewControllerDelegate{
                 }
             }
             navigationController?.popViewController(animated: true)
+            saveChecklistItems()
         }
 }
