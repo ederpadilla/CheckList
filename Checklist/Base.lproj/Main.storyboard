@@ -115,6 +115,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="22.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="hud-gs-zJy" eventType="editingDidEndOnExit" id="8yL-r9-Fd5"/>
+                                                        <outlet property="delegate" destination="hud-gs-zJy" id="GAM-mW-sCg"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
