@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="-379" y="-104"/>
         </scene>
-        <!--List Detail View Controller-->
+        <!--Add Checklist-->
         <scene sceneID="hXQ-Bd-r75">
             <objects>
-                <tableViewController id="hud-gs-zJy" customClass="ListDetailViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Add Checklist" id="hud-gs-zJy" customClass="ListDetailViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="DNR-vS-oTA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                             <outlet property="delegate" destination="hud-gs-zJy" id="6Rh-WB-Hgs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EZ0-WC-eHU"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="EZ0-WC-eHU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXq-AB-STB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
