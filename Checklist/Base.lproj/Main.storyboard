@@ -85,7 +85,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="NMo-iK-nAh"/>
                     <connections>
-                        <segue destination="eh8-Zh-XuJ" kind="show" id="iku-xb-JvT"/>
+                        <segue destination="eh8-Zh-XuJ" kind="show" identifier="ShowChecklist" id="iku-xb-JvT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCu-Rt-jcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

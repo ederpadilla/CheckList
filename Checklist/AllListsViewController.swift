@@ -26,4 +26,8 @@ class AllListsViewController: UITableViewController {
         cell.textLabel!.text = "List \(indexPath.row)"
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowChecklist", sender: nil)
+    }
 }
