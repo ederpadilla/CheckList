@@ -9,11 +9,13 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
     
+    var checklist: Checklist!
     var items = [ChecklistItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        title = checklist.name
         loadChecklistItems()
     }
     
@@ -114,7 +116,7 @@ class ChecklistViewController: UITableViewController {
         didSelectRowAt indexPath: IndexPath
     ) {
         if let cell = tableView.cellForRow(at: indexPath) {
-            var item = items[indexPath.row]
+            let item = items[indexPath.row]
             item.checked.toggle()
             configureCheckmark(for: cell, with: item)
         }
