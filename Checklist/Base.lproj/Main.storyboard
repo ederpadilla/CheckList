@@ -86,13 +86,13 @@
                     <navigationItem key="navigationItem" id="NMo-iK-nAh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AJp-fd-KeE">
                             <connections>
-                                <segue destination="hud-gs-zJy" kind="show" id="hHf-ek-pKc"/>
+                                <segue destination="hud-gs-zJy" kind="show" identifier="AddChecklist" id="hHf-ek-pKc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="eh8-Zh-XuJ" kind="show" identifier="ShowChecklist" id="iku-xb-JvT"/>
-                        <segue destination="hud-gs-zJy" kind="show" id="47U-B7-2yC"/>
+                        <segue destination="hud-gs-zJy" kind="show" identifier="EditChecklist" id="47U-B7-2yC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCu-Rt-jcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,12 +144,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="ER7-ED-HaB">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="OHM-e3-7mB" userLabel="Cancel">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OHM-e3-7mB" userLabel="Cancel">
                             <connections>
                                 <action selector="cancel" destination="hud-gs-zJy" id="3fB-F4-HGY"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" id="7CT-NH-xMt" userLabel="Done">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="7CT-NH-xMt" userLabel="Done">
                             <connections>
                                 <action selector="done" destination="hud-gs-zJy" id="RcO-m7-s3w"/>
                             </connections>
