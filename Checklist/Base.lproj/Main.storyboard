@@ -117,9 +117,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="ER7-ED-HaB">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="OHM-e3-7mB" userLabel="Cancel"/>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" id="7CT-NH-xMt" userLabel="Done"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="OHM-e3-7mB" userLabel="Cancel">
+                            <connections>
+                                <action selector="cancel" destination="hud-gs-zJy" id="3fB-F4-HGY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" id="7CT-NH-xMt" userLabel="Done">
+                            <connections>
+                                <action selector="done" destination="hud-gs-zJy" id="RcO-m7-s3w"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="7CT-NH-xMt" id="8cq-d8-g59"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXq-AB-STB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
