@@ -116,7 +116,10 @@
                             <outlet property="delegate" destination="hud-gs-zJy" id="6Rh-WB-Hgs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="EZ0-WC-eHU"/>
+                    <navigationItem key="navigationItem" title="Title" id="ER7-ED-HaB">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="OHM-e3-7mB" userLabel="Cancel"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" id="7CT-NH-xMt" userLabel="Done"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXq-AB-STB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
