@@ -13,6 +13,7 @@ class AllListsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

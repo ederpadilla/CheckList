@@ -13,8 +13,7 @@ class ChecklistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        // Load items
+        navigationItem.largeTitleDisplayMode = .never
         loadChecklistItems()
     }
     
