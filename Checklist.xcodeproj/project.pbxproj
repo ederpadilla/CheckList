@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E65B23462AD9A03200791847 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B23442AD9A03200791847 /* AllListsViewController.swift */; };
-		E65B23472AD9A03200791847 /* AllListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65B23452AD9A03200791847 /* AllListsViewController.xib */; };
 		E66732902AD4EEF800DABF8B /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667328F2AD4EEF800DABF8B /* ChecklistItem.swift */; };
 		E67775092AD6F16400BC1363 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67775082AD6F16400BC1363 /* ItemDetailViewController.swift */; };
 		E6CFCA3D2ACB24890057C2C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CFCA3C2ACB24890057C2C5 /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		E65B23442AD9A03200791847 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
-		E65B23452AD9A03200791847 /* AllListsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllListsViewController.xib; sourceTree = "<group>"; };
 		E667328F2AD4EEF800DABF8B /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		E67775082AD6F16400BC1363 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		E6CFCA392ACB24880057C2C5 /* Checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +72,6 @@
 				E667328F2AD4EEF800DABF8B /* ChecklistItem.swift */,
 				E67775082AD6F16400BC1363 /* ItemDetailViewController.swift */,
 				E65B23442AD9A03200791847 /* AllListsViewController.swift */,
-				E65B23452AD9A03200791847 /* AllListsViewController.xib */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -139,7 +136,6 @@
 			files = (
 				E6CFCA492ACB248B0057C2C5 /* LaunchScreen.storyboard in Resources */,
 				E6CFCA462ACB248B0057C2C5 /* Assets.xcassets in Resources */,
-				E65B23472AD9A03200791847 /* AllListsViewController.xib in Resources */,
 				E6CFCA442ACB24890057C2C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
