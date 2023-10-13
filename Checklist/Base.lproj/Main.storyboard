@@ -147,6 +147,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="7CT-NH-xMt" id="8cq-d8-g59"/>
+                        <outlet property="textField" destination="Zys-WX-hVQ" id="6JJ-Dr-Mhi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXq-AB-STB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
