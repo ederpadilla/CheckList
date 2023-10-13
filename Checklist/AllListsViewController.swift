@@ -16,6 +16,7 @@ class AllListsViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Check Lists"
         // 1
         var list = Checklist(name: "Birthdays")
         lists.append(list)
