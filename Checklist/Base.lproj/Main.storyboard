@@ -83,7 +83,13 @@
                             <outlet property="delegate" destination="WFK-mz-cNz" id="vJz-xi-mdM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NMo-iK-nAh"/>
+                    <navigationItem key="navigationItem" id="NMo-iK-nAh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AJp-fd-KeE">
+                            <connections>
+                                <segue destination="hud-gs-zJy" kind="show" id="hHf-ek-pKc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="eh8-Zh-XuJ" kind="show" identifier="ShowChecklist" id="iku-xb-JvT"/>
                         <segue destination="hud-gs-zJy" kind="show" id="47U-B7-2yC"/>
@@ -244,6 +250,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bqC-hd-iXd"/>
+        <segue reference="47U-B7-2yC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
