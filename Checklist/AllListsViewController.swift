@@ -35,6 +35,7 @@ class AllListsViewController: UITableViewController {
             item.text = "Item for \(list.name)"
             list.items.append(item)
         }
+        loadChecklists()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
