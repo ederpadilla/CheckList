@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E617C8DD2ADC92D70099CDF7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617C8DC2ADC92D70099CDF7 /* DataModel.swift */; };
 		E65B23462AD9A03200791847 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B23442AD9A03200791847 /* AllListsViewController.swift */; };
 		E65B23492AD9AFB600791847 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B23482AD9AFB500791847 /* Checklist.swift */; };
 		E65B234B2AD9C3FF00791847 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B234A2AD9C3FF00791847 /* ListDetailViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E617C8DC2ADC92D70099CDF7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E65B23442AD9A03200791847 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		E65B23482AD9AFB500791847 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		E65B234A2AD9C3FF00791847 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				E65B23442AD9A03200791847 /* AllListsViewController.swift */,
 				E65B23482AD9AFB500791847 /* Checklist.swift */,
 				E65B234A2AD9C3FF00791847 /* ListDetailViewController.swift */,
+				E617C8DC2ADC92D70099CDF7 /* DataModel.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				E66732902AD4EEF800DABF8B /* ChecklistItem.swift in Sources */,
 				E65B23492AD9AFB600791847 /* Checklist.swift in Sources */,
 				E65B234B2AD9C3FF00791847 /* ListDetailViewController.swift in Sources */,
+				E617C8DD2ADC92D70099CDF7 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
