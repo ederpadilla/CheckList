@@ -19,6 +19,16 @@ class AllListsViewController: UITableViewController {
         title = "Check Lists"
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.delegate = self
+        let index = dataModel.indexOfSelectedChecklist
+        if index != -1 {
+            let checklist = dataModel.lists[index]
+            performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowChecklist" {
             let controller = segue.destination as! ChecklistViewController
@@ -54,6 +64,11 @@ class AllListsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let checklist = dataModel.lists[indexPath.row]
         performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        saveUserDefault(indexPath.row)
+    }
+    
+    func saveUserDefault(_ indexPathRow: Int) {
+        dataModel.indexOfSelectedChecklist = indexPathRow
     }
     
     override func tableView(_ tableView: UITableView,
@@ -97,5 +112,16 @@ extension AllListsViewController: ListDetailViewControllerDelegate {
             }
         }
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension AllListsViewController: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              willShow viewController: UIViewController,
+                              animated: Bool) {
+        if viewController === self {
+            dataModel.indexOfSelectedChecklist = -1
+        }
     }
 }
