@@ -170,6 +170,9 @@
                                                 <constraint firstItem="kyO-vE-wvt" firstAttribute="top" secondItem="v38-4y-nlw" secondAttribute="top" id="zMu-wZ-cQ3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xpP-bw-JkH" kind="show" identifier="PickIcon" id="GEz-v5-xO5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -200,7 +203,7 @@
             </objects>
             <point key="canvasLocation" x="-379" y="606"/>
         </scene>
-        <!--Icon Picker View Controller-->
+        <!--Choose Icon-->
         <scene sceneID="n4I-pf-HML">
             <objects>
                 <tableViewController id="xpP-bw-JkH" customClass="IconPickerViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,6 +235,7 @@
                             <outlet property="delegate" destination="xpP-bw-JkH" id="o3F-K2-jrv"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Choose Icon" id="7gb-YC-grc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COh-Sk-eUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -29,7 +29,7 @@ class ListDetailViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
+        indexPath.section == 1 ? indexPath : nil
     }
     
     // MARK: - Actions
