@@ -105,7 +105,6 @@ extension AllListsViewController: ListDetailViewControllerDelegate {
     
     func listDetailViewController(_ controller: ListDetailViewController,
                                   didFinishAdding checklist: Checklist) {
-        let newRowIndex = dataModel.lists.count
         dataModel.lists.insert(checklist, at: 0)
         dataModel.sortChecklists()
         tableView.reloadData()

@@ -10,9 +10,11 @@ import UIKit
 class ListDetailViewController: UITableViewController {
     
     @IBOutlet var textField: UITextField!
+    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet var doneBarButton: UIBarButtonItem!
     weak var delegate: ListDetailViewControllerDelegate?
     var checklistToEdit: Checklist?
+    var iconName = "Folder"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,9 @@ class ListDetailViewController: UITableViewController {
             title = "Edit Checklist"
             textField.text = checklist.name
             doneBarButton.isEnabled = true
+            iconName = checklist.iconName
         }
+        iconImage.image = UIImage(named: iconName)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,10 +44,19 @@ class ListDetailViewController: UITableViewController {
     @IBAction func done() {
         if let checklist = checklistToEdit {
             checklist.name = textField.text!
+            checklist.iconName = iconName                  
             delegate?.listDetailViewController(self, didFinishEditing: checklist)
         } else {
-            let checklist = Checklist(name: textField.text!)
+            let checklist = Checklist(name: textField.text!, iconName: iconName)
             delegate?.listDetailViewController(self, didFinishAdding: checklist)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
+        if segue.identifier == "PickIcon" {
+            let controller = segue.destination as! IconPickerViewController
+            controller.delegate = self
         }
     }
 }
@@ -68,6 +81,16 @@ extension ListDetailViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+extension ListDetailViewController: IconPickerViewControllerDelegate {
+    
+    func iconPicker(_ picker: IconPickerViewController,
+                    didPick iconName: String) {
+        self.iconName = iconName
+        iconImage.image = UIImage(named: iconName)
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 protocol ListDetailViewControllerDelegate: AnyObject {

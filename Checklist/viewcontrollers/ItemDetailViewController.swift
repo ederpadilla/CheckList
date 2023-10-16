@@ -35,13 +35,13 @@ class ItemDetailViewController: UITableViewController {
     }
     
     @IBAction func done() {
-        if var item = itemToEdit {
+        if let item = itemToEdit {
             item.text = textField.text!
             delegate?.itemDetailViewController(
                 self,
                 didFinishEditing: item)
         } else {
-            var item = ChecklistItem()
+            let item = ChecklistItem()
             item.text = textField.text!
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
