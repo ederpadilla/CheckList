@@ -22,6 +22,8 @@ class ItemDetailViewController: UITableViewController {
             title = "Edit Item"
             textField.text = itemToEdit.text
             doneBarButton.isEnabled = true
+            shouldRemindSwitch.isOn = itemToEdit.shouldRemind
+            datePicker.date = itemToEdit.dueDate
         }
     }
     
@@ -39,12 +41,19 @@ class ItemDetailViewController: UITableViewController {
     @IBAction func done() {
         if let item = itemToEdit {
             item.text = textField.text!
-            delegate?.itemDetailViewController(
-                self,
-                didFinishEditing: item)
+            
+            item.shouldRemind = shouldRemindSwitch.isOn
+            item.dueDate = datePicker.date
+            
+            delegate?.itemDetailViewController(self, didFinishEditing: item)
         } else {
             let item = ChecklistItem()
             item.text = textField.text!
+            item.checked = false
+            
+            item.shouldRemind = shouldRemindSwitch.isOn
+            item.dueDate = datePicker.date
+            
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
