@@ -17,20 +17,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="jZs-iT-qb1">
-                                <rect key="frame" x="0.0" y="50" width="393" height="47"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="47.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jZs-iT-qb1" id="JxZ-qq-3RG">
-                                    <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="47"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="47.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-DG-FGl">
-                                            <rect key="frame" x="32" y="13" width="282.66666666666669" height="21"/>
+                                            <rect key="frame" x="32" y="12.999999999999998" width="282.66666666666669" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1F-8J-0Cb">
-                                            <rect key="frame" x="8" y="0.0" width="23" height="47"/>
+                                            <rect key="frame" x="8" y="0.0" width="23" height="47.333333333333336"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -280,6 +280,45 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="Jke-ze-4bh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="crN-vk-MQT">
+                                        <rect key="frame" x="0.0" y="76.333333969116211" width="393" height="31.333333969116211"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="crN-vk-MQT" id="ti8-57-t1t">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="31.333333969116211"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-8A-xgI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="31.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wZE-lA-bb2">
+                                                    <rect key="frame" x="344" y="0.0" width="51" height="31.333333333333332"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tbE-8A-xgI" firstAttribute="leading" secondItem="ti8-57-t1t" secondAttribute="leading" id="07C-vN-vg6"/>
+                                                <constraint firstAttribute="trailing" secondItem="wZE-lA-bb2" secondAttribute="trailing" id="PI4-HT-I2c"/>
+                                                <constraint firstItem="wZE-lA-bb2" firstAttribute="top" secondItem="ti8-57-t1t" secondAttribute="top" id="ZIV-2y-5mi"/>
+                                                <constraint firstAttribute="bottom" secondItem="wZE-lA-bb2" secondAttribute="bottom" id="fk9-O8-bN9"/>
+                                                <constraint firstItem="tbE-8A-xgI" firstAttribute="top" secondItem="ti8-57-t1t" secondAttribute="top" id="nTC-0i-f3x"/>
+                                                <constraint firstAttribute="bottom" secondItem="tbE-8A-xgI" secondAttribute="bottom" id="udw-76-0YO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LWO-pw-8QW">
+                                        <rect key="frame" x="0.0" y="107.66666793823242" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LWO-pw-8QW" id="FGm-RB-Q5J">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="HNl-NL-v4Y" id="VMH-N0-alF"/>
@@ -300,6 +339,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="CSa-4n-YLM" id="Rnb-je-kkI"/>
+                        <outlet property="shouldRemindSwitch" destination="wZE-lA-bb2" id="bcJ-LP-jOy"/>
                         <outlet property="textField" destination="nsd-5E-m2Q" id="Nfd-In-3kT"/>
                     </connections>
                 </tableViewController>
