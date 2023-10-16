@@ -303,6 +303,7 @@
                                                 <constraint firstItem="tbE-8A-xgI" firstAttribute="leading" secondItem="ti8-57-t1t" secondAttribute="leading" id="07C-vN-vg6"/>
                                                 <constraint firstAttribute="trailing" secondItem="wZE-lA-bb2" secondAttribute="trailing" id="PI4-HT-I2c"/>
                                                 <constraint firstItem="wZE-lA-bb2" firstAttribute="top" secondItem="ti8-57-t1t" secondAttribute="top" id="ZIV-2y-5mi"/>
+                                                <constraint firstItem="wZE-lA-bb2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tbE-8A-xgI" secondAttribute="trailing" constant="8" symbolic="YES" id="dj9-qs-d0f"/>
                                                 <constraint firstAttribute="bottom" secondItem="wZE-lA-bb2" secondAttribute="bottom" id="fk9-O8-bN9"/>
                                                 <constraint firstItem="tbE-8A-xgI" firstAttribute="top" secondItem="ti8-57-t1t" secondAttribute="top" id="nTC-0i-f3x"/>
                                                 <constraint firstAttribute="bottom" secondItem="tbE-8A-xgI" secondAttribute="bottom" id="udw-76-0YO"/>
@@ -310,11 +311,33 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LWO-pw-8QW">
-                                        <rect key="frame" x="0.0" y="107.66666793823242" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="107.66666793823242" width="393" height="42.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LWO-pw-8QW" id="FGm-RB-Q5J">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="42.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqV-RJ-pfO">
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="71" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-Bx-OsU">
+                                                    <rect key="frame" x="163" y="0.0" width="230" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="230" id="XRg-ED-0Hh"/>
+                                                    </constraints>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gzU-Bx-OsU" firstAttribute="top" secondItem="FGm-RB-Q5J" secondAttribute="top" id="Nbr-NW-agA"/>
+                                                <constraint firstAttribute="trailing" secondItem="gzU-Bx-OsU" secondAttribute="trailing" id="bHy-th-tcK"/>
+                                                <constraint firstItem="FqV-RJ-pfO" firstAttribute="leading" secondItem="FGm-RB-Q5J" secondAttribute="leadingMargin" id="doR-rU-7T5"/>
+                                                <constraint firstAttribute="bottom" secondItem="gzU-Bx-OsU" secondAttribute="bottom" id="lTc-de-Cfh"/>
+                                                <constraint firstItem="FqV-RJ-pfO" firstAttribute="top" secondItem="FGm-RB-Q5J" secondAttribute="topMargin" id="uup-Vr-Qki"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FqV-RJ-pfO" secondAttribute="bottom" id="x6m-hb-wIk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -338,6 +361,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="gzU-Bx-OsU" id="vr2-gT-a1M"/>
                         <outlet property="doneBarButton" destination="CSa-4n-YLM" id="Rnb-je-kkI"/>
                         <outlet property="shouldRemindSwitch" destination="wZE-lA-bb2" id="bcJ-LP-jOy"/>
                         <outlet property="textField" destination="nsd-5E-m2Q" id="Nfd-In-3kT"/>
