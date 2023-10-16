@@ -298,6 +298,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wZE-lA-bb2">
                                                     <rect key="frame" x="344" y="0.0" width="51" height="31.333333333333332"/>
                                                     <color key="onTintColor" red="1" green="0.62317428539999997" blue="0.93501307789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="shouldRemindToggled:" destination="HNl-NL-v4Y" eventType="valueChanged" id="7bC-zG-Ego"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
