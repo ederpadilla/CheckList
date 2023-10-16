@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 content: content,
                 trigger: trigger)
             center.add(request)
+            center.delegate = self
         }
         return true
     }
@@ -45,7 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
-    
-    
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    // MARK: - User Notification Delegates
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("Received local notification \(notification)")
+    }
+}
