@@ -44,7 +44,7 @@ class ItemDetailViewController: UITableViewController {
             
             item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = datePicker.date
-            
+            item.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishEditing: item)
         } else {
             let item = ChecklistItem()
@@ -53,16 +53,14 @@ class ItemDetailViewController: UITableViewController {
             
             item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = datePicker.date
-            
+            item.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
     }
     
     // MARK: - Table View Delegates
-    override func tableView(
-        _ tableView: UITableView,
-        willSelectRowAt indexPath: IndexPath
-    ) -> IndexPath? {
+    override func tableView(_ tableView: UITableView,
+                            willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         return nil
     }
 }
